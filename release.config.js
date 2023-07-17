@@ -1,6 +1,6 @@
 module.exports = {
     branches: "main",
-    repositoryUrl: "https://github.com/Nomzytech/gitactions",
+    repositoryUrl: "https://github.com/Nomzytech/semantic-versioning",
     plugins: [
         '@semantic-release/commit-analyzer',
         '@semantic-release/release-notes-generator',
