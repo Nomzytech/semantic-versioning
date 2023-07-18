@@ -1,5 +1,6 @@
 name: Terraform2
-on: [push]
+on:
+  - workflow_dispatch
 
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.ACCESS_KEY }}
@@ -11,8 +12,10 @@ jobs:
       contents: write
       issues: write
       pull-requests: write
-    runs-on: ubuntu-latest
-    steps:
+    runs-on: 
+       - self-hosted
+       - label-1
+    steps: 
       - name: checkout
         uses: actions/checkout@v3
       - name: setup-terraform
